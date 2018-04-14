@@ -23,6 +23,7 @@ const Header = ({ siteTitle, menuButtonClick }) => (
       <img src={menu} alt="Menu" style={{ height: '50px', margin: 0 }} />
     </button>
     <div style={{ width: '180px', padding: '5px' }}>
+      <Link to='/'>
       <img
         src={logo}
         alt="C&M Electrical (North West) LTD"
@@ -32,6 +33,7 @@ const Header = ({ siteTitle, menuButtonClick }) => (
           margin: 0,
         }}
       />
+      </Link>
     </div>
   </div>
 )
