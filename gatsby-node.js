@@ -9,6 +9,6 @@
 exports.modifyBabelrc = ({ babelrc }) => ({ 
     ...babelrc, 
     plugins: babelrc.plugins.concat(
-        ['transform-regenerator']
+        ['transform-regenerator', 'transform-runtime']
     ) 
 })
