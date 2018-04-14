@@ -33,8 +33,7 @@ export default class Layout extends Component{
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'C&M Electrical (North West) LTD' },
           ]}
         />
         <Header siteTitle={data.site.siteMetadata.title}  menuButtonClick={this.menuButtonClick} />
