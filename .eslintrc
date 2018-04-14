@@ -1,0 +1,7 @@
+{
+    "extends": "react-app",
+    "rules": {
+        "func-names": ["error", "never"],
+        "indent": ["error", 4],
+    }
+}
