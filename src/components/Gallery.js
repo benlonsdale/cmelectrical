@@ -24,7 +24,7 @@ export default class Gallery extends Component {
         this.setState({fetching: true})
         let response = await axios({
             method: 'GET',
-            url: `https://api.imgur.com/3/album/p5tBQ/images`,
+            url: `https://api.imgur.com/3/album/8bLRkdD/images`,
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
