@@ -89,13 +89,21 @@ export default class Gallery extends Component {
                     key={i}
                     onClick={e => this.openLightbox(i, e)}
                     style={{
-                        flex: '0 0 120px'
+                        flex: '0 0 220px',
+                        display: 'block',
+                        overflow: 'hidden',
+                        height: '200px'
                     }}
                 >
                     <img
                         src={obj.src}
                         style={{
-                            margin: '2px'
+                            margin: '2px',
+                            width:'100%',
+                            height: 'auto',
+                            minHeight: '100%',
+                            minWidth: '100%'
+                                                        
                         }}
                         // className={css(classes.source)}
                     />

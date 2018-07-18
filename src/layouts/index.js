@@ -5,6 +5,7 @@ import CustomSidebar from '../components/CustomSidebar'
 
 import Header from '../components/header'
 import './index.css'
+import Footer from '../components/footer';
 
 export default class Layout extends Component{
   constructor(props){
@@ -47,6 +48,7 @@ export default class Layout extends Component{
         >
           {children()}
         </div>
+        <Footer />
       </CustomSidebar>
     )
   }
