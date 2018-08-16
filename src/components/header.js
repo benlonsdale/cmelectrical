@@ -32,8 +32,7 @@ export default class Header extends React.Component{
                                 src={logo}
                                 alt="C&M Electrical (North West) LTD"
                                 style={{
-                                    width: 'auto',
-                                    height: '100%',
+                                    width: 'auto',                                    
                                     margin: 0,
                                 }}
                             />
@@ -115,6 +114,11 @@ const MainHead = styled.div`
             padding: 2px;
             img {
                 width: auto;
+                height: 110px;
+                width: auto;
+                @media screen and (max-width: 500px) {
+                    height: 70px;
+                }
             }
         }
         .nav-menu {
