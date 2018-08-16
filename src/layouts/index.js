@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import CustomSidebar from '../components/CustomSidebar'
 
 import Header from '../components/header'
 import './index.css'
@@ -25,7 +24,7 @@ export default class Layout extends Component {
                 />
                 <Header
                     siteTitle={data.site.siteMetadata.title}
-                    pages={data.additionalMenuItems.pages}
+                    pages={data.allWordpressPage.pages}
                 />
                 <div
                     style={{
@@ -54,13 +53,14 @@ export const query = graphql`
                 title
             }
         }
-        additionalMenuItems: allWordpressPage(
-            filter: { slug: { ne: "home" } }
+        allWordpressPage(
+            sort: {fields: [menu_order], order: ASC}
         ) {
             pages: edges {
                 details: node {
                     slug
                     title
+                    menu_order
                 }
             }
         }

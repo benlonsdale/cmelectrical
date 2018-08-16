@@ -51,8 +51,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     })
                 })
             })
-            .then(() => {
-                
+            .then(() => {                
                 graphql(`
                     {
                         allWordpressPost {
@@ -81,7 +80,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                                 })
                             })
                             resolve()
-                        })
+                    })                    
                 })              
                 
             

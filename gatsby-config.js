@@ -7,10 +7,10 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `candm-api.test`,
+        baseUrl: `api.candmelectricalltd.co.uk`,
         protocol: `http`,
         hostingWPCOM: false,
-        useACF: false,
+        useACF: false,      
       },
     },
   ],
