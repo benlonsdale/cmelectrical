@@ -30,11 +30,11 @@ const Footer = ({ siteTitle, menuButtonClick }) => (
 )
 
 let Logo = styled.img`
-    /* height: auto;
-    max-height: 60px;
+    max-height: 100%;
+    max-width: 100%;
+    height:auto;
     width: auto;
-    max-width: 20%;
-    margin-bottom: 0; */
+    margin: 0;
 `
 
 const Container = styled.div`
@@ -49,14 +49,7 @@ const Container = styled.div`
         justify-content: space-between;       
         .logo {
             width: 20%;         
-            text-align: center;   
-            img {
-                max-height: 100%;
-                max-width: 100%;
-                height:auto;
-                width: auto;
-                margin: 0;
-            }
+            text-align: center;               
         }
         
     }

@@ -53,6 +53,9 @@ export default class Header extends React.Component{
                                     </Link>
                                 )
                             })}
+                            <Link className="nav-item" to="/blog">
+                                Blog
+                            </Link>
                             <Link className="nav-item" to="/contact">
                                 Contact Us
                             </Link>
@@ -80,6 +83,9 @@ export default class Header extends React.Component{
                                         </Link>
                                     )
                                 })}
+                                <Link onClick={() => this.setState({open: false})} className="nav-item" to="/blog">
+                                    Blog
+                                </Link>
                                 <Link onClick={() => this.setState({open: false})} className="nav-item" to="/contact">
                                     Contact Us
                                 </Link>
@@ -127,7 +133,7 @@ const MainHead = styled.div`
             justify-content: flex-end;
             a {
                 display: inline-block;
-                padding: 15px;
+                padding: 8px;
                 margin: 10px;
                 border-radius: 5px;
                 transition: all 0.2s ease;
