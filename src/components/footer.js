@@ -5,8 +5,6 @@ import * as logos from '../images/logos'
 const Footer = ({ siteTitle, menuButtonClick }) => (
     <Container
         style={{
-            marginBottom: '1.45rem',
-            boxShadow: '#d6d6d6 0px 0px 13px',
             display: 'flex',
             justifyContent: 'space-around',
             padding: '10px',
@@ -41,10 +39,8 @@ let Logo = styled.img`
 
 const Container = styled.div`
     height: 135px;
-    box-shadow: '#d6d6d6 0px 0px 13px';
     display: flex;
     justify-content: center;
-    box-shadow: 2px 2px 2px 2px #d6d6d6;
     font-family: sans-serif;
     .content {
         max-width: 960px;
@@ -59,6 +55,7 @@ const Container = styled.div`
                 max-width: 100%;
                 height:auto;
                 width: auto;
+                margin: 0;
             }
         }
         
