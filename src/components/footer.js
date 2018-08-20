@@ -52,8 +52,14 @@ const Container = styled.div`
         display: flex;
         justify-content: space-between;       
         .logo {
-            width: 20%;
-            display: flex;
+            width: 20%;         
+            text-align: center;   
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                height:auto;
+                width: auto;
+            }
         }
         
     }
