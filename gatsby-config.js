@@ -13,5 +13,6 @@ module.exports = {
         useACF: false,      
       },
     },
+    {resolve: `gatsby-plugin-styled-components`},
   ],
 }
