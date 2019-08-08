@@ -20,9 +20,6 @@ const Footer = ({ siteTitle, menuButtonClick }) => (
                 <Logo src={logos.compex} />
             </div>
             <div className="logo">
-                <Logo src={logos.napit} />
-            </div>
-            <div className="logo">
                 <Logo src={logos.trustmark} />
             </div>
         </div>

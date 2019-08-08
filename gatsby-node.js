@@ -19,70 +19,70 @@ exports.modifyBabelrc = ({ babelrc }) => ({
     ]),
 })
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-    const { createPage } = boundActionCreators
+// exports.createPages = ({ graphql, boundActionCreators }) => {
+//     const { createPage } = boundActionCreators
 
-    return new Promise((resolve, reject) => {
-        graphql(`
-            {
-                allWordpressPage {
-                    edges {
-                        node {
-                            id
-                            slug
-                        }
-                    }
-                }
-            }
-        `)
-            .then(result => {
-                if (result.errors) {
-                    reject(result.errors)
-                }
+//     return new Promise((resolve, reject) => {
+//         graphql(`
+//             {
+//                 allWordpressPage {
+//                     edges {
+//                         node {
+//                             id
+//                             slug
+//                         }
+//                     }
+//                 }
+//             }
+//         `)
+//             .then(result => {
+//                 if (result.errors) {
+//                     reject(result.errors)
+//                 }
 
-                const pageTemplate = path.resolve(`./src/templates/page.js`)
-                _.each(result.data.allWordpressPage.edges, edge => {
-                    createPage({
-                        path: edge.node.slug !== 'home' ? `/${edge.node.slug}/` : '/',
-                        component: slash(pageTemplate),
-                        context: {
-                            id: edge.node.id,
-                        },
-                    })
-                })
-            })
-            .then(() => {                
-                graphql(`
-                    {
-                        allWordpressPost {
-                            edges {
-                                node {
-                                    id
-                                    slug
-                                }
-                            }
-                        }
-                    }
-                `)
-                    .then(result => {
-                            if (result.errors) {
-                                reject(result.errors)
-                            }
+//                 const pageTemplate = path.resolve(`./src/templates/page.js`)
+//                 _.each(result.data.allWordpressPage.edges, edge => {
+//                     createPage({
+//                         path: edge.node.slug !== 'home' ? `/${edge.node.slug}/` : '/',
+//                         component: slash(pageTemplate),
+//                         context: {
+//                             id: edge.node.id,
+//                         },
+//                     })
+//                 })
+//             })
+//             .then(() => {                
+//                 graphql(`
+//                     {
+//                         allWordpressPost {
+//                             edges {
+//                                 node {
+//                                     id
+//                                     slug
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 `)
+//                     .then(result => {
+//                             if (result.errors) {
+//                                 reject(result.errors)
+//                             }
 
-                            const postTemplate = path.resolve(`./src/templates/post.js`)
-                            _.each(result.data.allWordpressPost.edges, edge => {
-                                createPage({
-                                    path: `/blog/${edge.node.slug}/`,
-                                    component: slash(postTemplate),
-                                    context: {
-                                        id: edge.node.id,
-                                    },
-                                })
-                            })
-                            resolve()
-                    })                    
-                })              
+//                             const postTemplate = path.resolve(`./src/templates/post.js`)
+//                             _.each(result.data.allWordpressPost.edges, edge => {
+//                                 createPage({
+//                                     path: `/blog/${edge.node.slug}/`,
+//                                     component: slash(postTemplate),
+//                                     context: {
+//                                         id: edge.node.id,
+//                                     },
+//                                 })
+//                             })
+//                             resolve()
+//                     })                    
+//                 })              
                 
             
-    })
-}
+//     })
+// }

@@ -24,7 +24,6 @@ export default class Layout extends Component {
                 />
                 <Header
                     siteTitle={data.site.siteMetadata.title}
-                    pages={data.allWordpressPage.pages}
                 />
                 <div
                     style={{
@@ -51,17 +50,6 @@ export const query = graphql`
         site {
             siteMetadata {
                 title
-            }
-        }
-        allWordpressPage(
-            sort: {fields: [menu_order], order: ASC}
-        ) {
-            pages: edges {
-                details: node {
-                    slug
-                    title
-                    menu_order
-                }
             }
         }
     }
