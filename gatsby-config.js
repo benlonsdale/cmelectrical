@@ -4,15 +4,6 @@ module.exports = {
   },
   plugins: [
     {resolve: 'gatsby-plugin-react-helmet'},
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        baseUrl: `api.candmelectricalltd.co.uk`,
-        protocol: `http`,
-        hostingWPCOM: false,
-        useACF: false,      
-      },
-    },
     {resolve: `gatsby-plugin-styled-components`},
   ],
 }

@@ -38,23 +38,14 @@ export default class Header extends React.Component{
                             />
                         </Link>
                         <div className="nav-menu">
-                            {pages.map(page => {
-                                console.log(page)
-                                return (
-                                    <Link
-                                        className="nav-item"
-                                        to={`/${
-                                            page.details.slug !== 'home'
-                                                ? page.details.slug
-                                                : ''
-                                        }`}
-                                    >
-                                        {page.details.title}
-                                    </Link>
-                                )
-                            })}
-                            <Link className="nav-item" to="/blog">
-                                Blog
+                            <Link className="nav-item" to="/">
+                                Home
+                            </Link>
+                            <Link className="nav-item" to="/about-us">
+                                About Us
+                            </Link>
+                            <Link className="nav-item" to="/accreditations">
+                                Accreditations
                             </Link>
                             <Link className="nav-item" to="/contact">
                                 Contact Us
@@ -67,24 +58,14 @@ export default class Header extends React.Component{
                                 <span />
                             </button>
                             <Extendable open={this.state.open}>
-                                {pages.map(page => {
-                                    console.log(page)
-                                    return (
-                                        <Link
-                                            className="nav-item"
-                                            to={`/${
-                                                page.details.slug !== 'home'
-                                                    ? page.details.slug
-                                                    : ''
-                                            }`}
-                                            onClick={() => this.setState({open: false})}
-                                        >
-                                            {page.details.title}
-                                        </Link>
-                                    )
-                                })}
-                                <Link onClick={() => this.setState({open: false})} className="nav-item" to="/blog">
-                                    Blog
+                                <Link onClick={() => this.setState({open: false})} className="nav-item" to="/">
+                                    Home
+                                </Link>
+                                <Link onClick={() => this.setState({open: false})} className="nav-item" to="/about-us">
+                                    About Us
+                                </Link>
+                                <Link onClick={() => this.setState({open: false})} className="nav-item" to="/accreditations">
+                                    Accreditations
                                 </Link>
                                 <Link onClick={() => this.setState({open: false})} className="nav-item" to="/contact">
                                     Contact Us
